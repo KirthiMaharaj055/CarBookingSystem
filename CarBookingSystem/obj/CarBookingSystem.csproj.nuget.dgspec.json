@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[8.0.6, )"
             },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.25.0, )"
+            },
             "MongoDB.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.0-preview.1, )"
