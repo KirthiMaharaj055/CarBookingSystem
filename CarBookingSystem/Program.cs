@@ -1,9 +1,20 @@
+using CarBookingSystem.Models;
+using CarBookingSystem.Services;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+var mongoDBSettings = builder.Configuration.GetSection("MongoDBSettings").Get<MongoDBSettings>();
+builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection("MongoDBSettings"));
+
+builder.Services.AddDbContext<CarBookingDbContext>(options =>
+options.UseMongoDB(mongoDBSettings.AtlasURI ?? "mongodb+srv://carBooking:Password123@cluster0.bfi48by.mongodb.net/CarBooking?retryWrites=true&w=majority&appName=Cluster0", mongoDBSettings.DatabaseName ?? "CarBooking"));
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
