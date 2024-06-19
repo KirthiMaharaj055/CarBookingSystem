@@ -18,8 +18,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/kirthimaharaj/git/CarBookingSystem/CarBookingSystem
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/kirthimaharaj/git/CarBookingSystem/CarBookingSystem/Views/Cars/CarListView.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2Fycy9DYXJMaXN0Vmlldy5jc2h0bWw=
+[/Users/kirthimaharaj/git/CarBookingSystem/CarBookingSystem/Views/Cars/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2Fycy9BZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kirthimaharaj/git/CarBookingSystem/CarBookingSystem/Views/Cars/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2Fycy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/kirthimaharaj/git/CarBookingSystem/CarBookingSystem/Views/Home/Index.cshtml]
