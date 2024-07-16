@@ -22,6 +22,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va2luZy9BZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/kirthimaharaj/git/CarBookingSystem/CarBookingSystem/Views/Booking/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va2luZy9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kirthimaharaj/git/CarBookingSystem/CarBookingSystem/Views/Booking/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va2luZy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/kirthimaharaj/git/CarBookingSystem/CarBookingSystem/Views/Booking/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va2luZy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
