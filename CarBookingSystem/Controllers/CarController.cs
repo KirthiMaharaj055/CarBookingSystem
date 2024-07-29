@@ -1,3 +1,104 @@
+// using System.Diagnostics;
+// using Microsoft.AspNetCore.Mvc;
+// using CarBookingSystem.Models;
+// using CarBookingSystem.Services;
+// using CarBookingSystem.ViewModels;
+// using MongoDB.Bson;
+
+// namespace CarBookingSystem.Controllers;
+
+// public class CarController : Controller
+// {
+//     private readonly ILogger<CarController> _logger;
+//     private readonly ICarService _carService;
+
+//     public CarController(ILogger<CarController> logger,ICarService carService)
+//     {
+//         _logger = logger;
+//         _carService = carService;
+//     }
+
+//     public  async Task<IActionResult> Index()
+//     {
+//         CarListViewModel viewModel = new()
+//         {
+//             Cars = await _carService.GetAllCarsAsync(),
+//         };
+//         return View(viewModel);
+//     }
+
+//     public async Task<IActionResult> Add()
+//     {
+//         return View();
+//     }
+
+
+//     [HttpPost]
+//     public async Task<IActionResult> Add(CarAddViewModel carAddViewModel)
+//     {
+//         if (ModelState.IsValid)
+//         {
+//             Car newCar = new()
+//             {
+//                 Model = carAddViewModel.Car.Model,
+//                 Location = carAddViewModel.Car.Location,
+//                 NumberPlate = carAddViewModel.Car.NumberPlate
+//             };
+
+//             await _carService.AddCarAsync(newCar); // Await the asynchronous method call
+
+//             return RedirectToAction("Index");
+//         }
+//         return View(carAddViewModel);      
+//     }
+
+//     public async Task<IActionResult> Edit(string id)
+//     {
+//         if (id == null)
+//         {
+//             return NotFound();
+//         }
+
+//         var selectedCar = await _carService.GetCarByIdAsync(new ObjectId(id)); // Await the asynchronous method call
+//         return View(selectedCar);
+//     }
+
+//     [HttpPost]
+//     public async Task<IActionResult> Edit(Car car)
+//     {
+//         try
+//         {
+//             if (ModelState.IsValid)
+//             {
+//                 await _carService.EditCarAsync(car); // Await the asynchronous method call
+//                 return RedirectToAction("Index");
+//             }
+//             else
+//             {
+//                 return BadRequest();
+//             }
+//         }
+//         catch (Exception ex)
+//         {
+//             ModelState.AddModelError("", $"Updating the car failed, please try again! Error: {ex.Message}");
+//         }
+
+//         return View(car);
+//     }
+
+//     public async Task<IActionResult> Privacy()
+//     {
+//         return View();
+//     }
+
+//     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+//     public async Task<IActionResult> Error()
+//     {
+//         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+//     }
+// }
+
+
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using CarBookingSystem.Models;
@@ -5,95 +106,93 @@ using CarBookingSystem.Services;
 using CarBookingSystem.ViewModels;
 using MongoDB.Bson;
 
-namespace CarBookingSystem.Controllers;
-
-public class CarController : Controller
+namespace CarBookingSystem.Controllers
 {
-    private readonly ILogger<CarController> _logger;
-    private readonly ICarService _carService;
-
-    public CarController(ILogger<CarController> logger,ICarService carService)
+    public class CarController : Controller
     {
-        _logger = logger;
-        _carService = carService;
-    }
+        private readonly ILogger<CarController> _logger;
+        private readonly ICarService _carService;
 
-    public  async Task<IActionResult> Index()
-    {
-        CarListViewModel viewModel = new()
+        public CarController(ILogger<CarController> logger, ICarService carService)
         {
-            Cars = await _carService.GetAllCarsAsync(),
-        };
-        return View(viewModel);
-    }
-
-    public async Task<IActionResult> Add()
-    {
-        return View();
-    }
-
-
-    [HttpPost]
-    public async Task<IActionResult> Add(CarAddViewModel carAddViewModel)
-    {
-        if (ModelState.IsValid)
-        {
-            Car newCar = new()
-            {
-                Model = carAddViewModel.Car.Model,
-                Location = carAddViewModel.Car.Location,
-                NumberPlate = carAddViewModel.Car.NumberPlate
-            };
-
-            await _carService.AddCarAsync(newCar); // Await the asynchronous method call
-
-            return RedirectToAction("Index");
-        }
-        return View(carAddViewModel);      
-    }
-
-    public async Task<IActionResult> Edit(string id)
-    {
-        if (id == null)
-        {
-            return NotFound();
+            _logger = logger;
+            _carService = carService;
         }
 
-        var selectedCar = await _carService.GetCarByIdAsync(new ObjectId(id)); // Await the asynchronous method call
-        return View(selectedCar);
-    }
+        public async Task<IActionResult> Index()
+        {
+            var cars = await _carService.GetAllCarsAsync();
+            var viewModel = new CarListViewModel { Cars = cars };
+            return View(viewModel);
+        }
 
-    [HttpPost]
-    public async Task<IActionResult> Edit(Car car)
-    {
-        try
+        public IActionResult Add()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Add(CarAddViewModel carAddViewModel)
         {
             if (ModelState.IsValid)
             {
-                await _carService.EditCarAsync(car); // Await the asynchronous method call
+                var newCar = new Car
+                {
+                    Model = carAddViewModel.Car.Model,
+                    Location = carAddViewModel.Car.Location,
+                    NumberPlate = carAddViewModel.Car.NumberPlate
+                };
+
+                await _carService.AddCarAsync(newCar);
                 return RedirectToAction("Index");
             }
-            else
-            {
-                return BadRequest();
-            }
+
+            return View(carAddViewModel);
         }
-        catch (Exception ex)
+
+        public async Task<IActionResult> Edit(string id)
         {
-            ModelState.AddModelError("", $"Updating the car failed, please try again! Error: {ex.Message}");
+            if (string.IsNullOrEmpty(id))
+            {
+                return NotFound();
+            }
+
+            var selectedCar = await _carService.GetCarByIdAsync(new ObjectId(id));
+            if (selectedCar == null)
+            {
+                return NotFound();
+            }
+
+            return View(selectedCar);
         }
 
-        return View(car);
-    }
+        [HttpPost]
+        public async Task<IActionResult> Edit(Car car)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    await _carService.EditCarAsync(car);
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError("", $"Updating the car failed, please try again! Error: {ex.Message}");
+                }
+            }
+            return View(car);
+        }
 
-    public async Task<IActionResult> Privacy()
-    {
-        return View();
-    }
+        public IActionResult Privacy()
+        {
+            return View();
+        }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public async Task<IActionResult> Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
     }
 }

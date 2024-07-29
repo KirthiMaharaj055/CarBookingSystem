@@ -85,13 +85,20 @@ namespace CarBookingSystem.Services
             }
         }
 
+        // public async Task<IEnumerable<Booking>> GetAllBookingsAsync()
+        // {
+        //    // return await _carDbContext.Bookings.OrderBy(b => b.StartDate).AsNoTracking().AsEnumerable<Booking>();
+        //     return await _carDbContext.Bookings
+        //                               .OrderBy(b => b.StartDate)
+        //                               .AsNoTracking()
+        //                               .ToListAsync();
+        // }
         public async Task<IEnumerable<Booking>> GetAllBookingsAsync()
         {
-           // return await _carDbContext.Bookings.OrderBy(b => b.StartDate).AsNoTracking().AsEnumerable<Booking>();
             return await _carDbContext.Bookings
-                                      .OrderBy(b => b.StartDate)
-                                      .AsNoTracking()
-                                      .ToListAsync();
+                                    .OrderBy(b => b.StartDate)
+                                    .AsNoTracking()
+                                    .ToListAsync();
         }
 
         public async Task<Booking?> GetBookingByIdAsync(ObjectId id)

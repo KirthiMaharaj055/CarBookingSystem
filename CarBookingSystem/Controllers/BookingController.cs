@@ -24,7 +24,7 @@ namespace CarBookingSystem.Controllers
             _carService = carService;
         }
 
-        public async  Task<IActionResult> Index()
+        public async Task<IActionResult> Index()
         {
             BookingListViewModel viewModel = new BookingListViewModel()
             {
@@ -32,6 +32,7 @@ namespace CarBookingSystem.Controllers
             };
             return View(viewModel);
         }
+
 
         public async Task<IActionResult> Add(string carId)
         {

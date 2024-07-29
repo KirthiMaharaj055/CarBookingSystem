@@ -1,38 +1,19 @@
 @model BookingListViewModel
 
-
-@if (TempData["BookingDeleted"] != null)
-{
+@if (TempData["BookingDeleted"] != null) {
     <p class="text-success">@TempData["BookingDeleted"]</p>
 }
 
-
-@if (!Model.Bookings.Any())
+@if (Model != null && Model.Bookings.Any())
 {
-    <p>No results</p>
-}
-
-
-else
-{    
     <table class="table table-condensed table-bordered">
         <tr>
-            <th>
-                Booked Car
-            </th>
-            <th>
-                Start Date
-            </th>
-            <th>
-                End Date
-            </th>
-            <th>
-                Actions
-            </th>
+            <th>Booked Car</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Actions</th>
         </tr>
-
-
-        @foreach(var booking in Model.Bookings)
+        @foreach (var booking in Model.Bookings)
         {
             <tr>
                 <td>@booking.CarModel</td>
@@ -44,9 +25,9 @@ else
                 </td>
             </tr>
         }
-
-
-    </table>   
-
-
+    </table>
+}
+else
+{
+    <p>No bookings found.</p>
 }
