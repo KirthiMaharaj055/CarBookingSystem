@@ -6,7 +6,7 @@ A sample application using ASP.NET MVC that shows CRUD with change tracking usin
 The app is a simple car garage and booking system that allows you to add, edit and delete cars and bookings.
 
 ## Prerequisites
-- .NET 7.0
+- .NET 8.0
 - [MongoDB Atlas Account](https://www.mongodb.com/cloud/atlas)
 - [Free M0 Tier Cluster](https://www.mongodb.com/cloud/atlas/pricing)
 
