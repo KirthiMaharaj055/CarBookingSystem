@@ -18,12 +18,36 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/kirthimaharaj/git/CarBookingSystem/CarBookingSystem
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/kirthimaharaj/git/CarBookingSystem/CarBookingSystem/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+[/Users/kirthimaharaj/git/CarBookingSystem/CarBookingSystem/Views/Booking/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va2luZy9BZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/kirthimaharaj/git/CarBookingSystem/CarBookingSystem/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+[/Users/kirthimaharaj/git/CarBookingSystem/CarBookingSystem/Views/Booking/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va2luZy9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kirthimaharaj/git/CarBookingSystem/CarBookingSystem/Views/Booking/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va2luZy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kirthimaharaj/git/CarBookingSystem/CarBookingSystem/Views/Booking/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQm9va2luZy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kirthimaharaj/git/CarBookingSystem/CarBookingSystem/Views/Car/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FyL0FkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kirthimaharaj/git/CarBookingSystem/CarBookingSystem/Views/Car/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FyL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kirthimaharaj/git/CarBookingSystem/CarBookingSystem/Views/Car/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FyL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/kirthimaharaj/git/CarBookingSystem/CarBookingSystem/Views/Car/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FyL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/kirthimaharaj/git/CarBookingSystem/CarBookingSystem/Views/Shared/Error.cshtml]

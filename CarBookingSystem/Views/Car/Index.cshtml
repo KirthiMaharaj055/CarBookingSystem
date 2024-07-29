@@ -1,0 +1,35 @@
+@model CarListViewModel
+
+<h2>Cars List</h2>
+<hr />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Model</th>
+            <th>Number Plate</th>
+            <th>Location</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var car in Model.Cars)
+        {
+            <tr>
+                <td>@car.Model</td>
+                <td>@car.NumberPlate</td>
+                <td>@car.Location</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = car.Id })" class="btn btn-primary">Edit</a>
+                    <a href="@Url.Action("Delete", new { id = car.Id })" class="btn btn-danger">Delete</a>
+                    @if(!car.IsBooked)
+                    {
+                        <a asp-controller="Booking" asp-action="Add" asp-route-carId="@car.Id.ToString()">Book</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Add")" class="btn btn-success">Add New Car</a>

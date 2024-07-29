@@ -47,11 +47,11 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore/8.0.6": {
+      "Microsoft.EntityFrameworkCore/8.0.7": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "8.0.6",
-          "Microsoft.EntityFrameworkCore.Analyzers": "8.0.6",
+          "Microsoft.EntityFrameworkCore.Abstractions": "8.0.7",
+          "Microsoft.EntityFrameworkCore.Analyzers": "8.0.7",
           "Microsoft.Extensions.Caching.Memory": "8.0.0",
           "Microsoft.Extensions.Logging": "8.0.0"
         },
@@ -69,7 +69,7 @@
           "buildTransitive/net8.0/Microsoft.EntityFrameworkCore.props": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Abstractions/8.0.6": {
+      "Microsoft.EntityFrameworkCore.Abstractions/8.0.7": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
@@ -82,7 +82,7 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/8.0.6": {
+      "Microsoft.EntityFrameworkCore.Analyzers/8.0.7": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -276,7 +276,7 @@
           }
         }
       },
-      "MongoDB.Bson/2.25.0": {
+      "MongoDB.Bson/2.27.0": {
         "type": "package",
         "dependencies": {
           "System.Memory": "4.5.5",
@@ -293,13 +293,13 @@
           }
         }
       },
-      "MongoDB.Driver/2.25.0": {
+      "MongoDB.Driver/2.27.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
-          "MongoDB.Bson": "2.25.0",
-          "MongoDB.Driver.Core": "2.25.0",
-          "MongoDB.Libmongocrypt": "1.8.2"
+          "MongoDB.Bson": "2.27.0",
+          "MongoDB.Driver.Core": "2.27.0",
+          "MongoDB.Libmongocrypt": "1.10.0"
         },
         "compile": {
           "lib/netstandard2.1/MongoDB.Driver.dll": {
@@ -312,14 +312,14 @@
           }
         }
       },
-      "MongoDB.Driver.Core/2.25.0": {
+      "MongoDB.Driver.Core/2.27.0": {
         "type": "package",
         "dependencies": {
           "AWSSDK.SecurityToken": "3.7.100.14",
           "DnsClient": "1.6.1",
           "Microsoft.Extensions.Logging.Abstractions": "2.0.0",
-          "MongoDB.Bson": "2.25.0",
-          "MongoDB.Libmongocrypt": "1.8.2",
+          "MongoDB.Bson": "2.27.0",
+          "MongoDB.Libmongocrypt": "1.10.0",
           "SharpCompress": "0.30.1",
           "Snappier": "1.0.0",
           "System.Buffers": "4.5.1",
@@ -336,20 +336,20 @@
           }
         }
       },
-      "MongoDB.EntityFrameworkCore/7.0.0-preview.1": {
+      "MongoDB.EntityFrameworkCore/8.0.3": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "7.0.5",
-          "MongoDB.Driver": "2.22.0"
+          "Microsoft.EntityFrameworkCore": "8.0.6",
+          "MongoDB.Driver": "2.27.0"
         },
         "compile": {
-          "lib/net7.0/MongoDB.EntityFrameworkCore.dll": {}
+          "lib/net8.0/MongoDB.EntityFrameworkCore.dll": {}
         },
         "runtime": {
-          "lib/net7.0/MongoDB.EntityFrameworkCore.dll": {}
+          "lib/net8.0/MongoDB.EntityFrameworkCore.dll": {}
         }
       },
-      "MongoDB.Libmongocrypt/1.8.2": {
+      "MongoDB.Libmongocrypt/1.10.0": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/MongoDB.Libmongocrypt.dll": {}
@@ -569,10 +569,10 @@
         "lib/netstandard2.1/DnsClient.xml"
       ]
     },
-    "Microsoft.EntityFrameworkCore/8.0.6": {
-      "sha512": "Ms5e5QuBAjVIuQsGumeLvkgMiOpnj6wxPvwBIoe1NfTkseWK4NZYztnhgDlpkCPkrUmJEXLv69kl349Ours30Q==",
+    "Microsoft.EntityFrameworkCore/8.0.7": {
+      "sha512": "UOyPNAgyzw/E4hUCurqvZxi0WWVLQAGZuntFPzkTXtvJLTqRjKvokvhv+XazAUSODLsU1DZ67GjZ4mT9d82+0g==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore/8.0.6",
+      "path": "microsoft.entityframeworkcore/8.0.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -581,14 +581,14 @@
         "buildTransitive/net8.0/Microsoft.EntityFrameworkCore.props",
         "lib/net8.0/Microsoft.EntityFrameworkCore.dll",
         "lib/net8.0/Microsoft.EntityFrameworkCore.xml",
-        "microsoft.entityframeworkcore.8.0.6.nupkg.sha512",
+        "microsoft.entityframeworkcore.8.0.7.nupkg.sha512",
         "microsoft.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Abstractions/8.0.6": {
-      "sha512": "X7wSSBNFRuN8j8M9HDYG7rPpEeyhY+PdJZR9rftmgvsZH0eK5+bZ3b3As8iO4rLEpjsBzDnrgSIY6q2F3HQatw==",
+    "Microsoft.EntityFrameworkCore.Abstractions/8.0.7": {
+      "sha512": "DHX6nxcg4/tpWfTjAleKrXveDiNFY/OGOK6nm27GipUXNI2Uofev9cH5SYXmtGIgHWxlvfn754TXN4WnrixOwg==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.abstractions/8.0.6",
+      "path": "microsoft.entityframeworkcore.abstractions/8.0.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -596,14 +596,14 @@
         "PACKAGE.md",
         "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll",
         "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.xml",
-        "microsoft.entityframeworkcore.abstractions.8.0.6.nupkg.sha512",
+        "microsoft.entityframeworkcore.abstractions.8.0.7.nupkg.sha512",
         "microsoft.entityframeworkcore.abstractions.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/8.0.6": {
-      "sha512": "fDNtuQ4lAaPaCOlsrwUck/GvnF4QLeDpMmE1L5QtxZpMSmWfnL2/vk8sDL9OVTWcfprooI9V5MNpIx3/Tq5ehg==",
+    "Microsoft.EntityFrameworkCore.Analyzers/8.0.7": {
+      "sha512": "nerD0vEOYJVhVapamRVH9DrUYbDNMJ5bPfWze4SibDDaDaekzgwQqBht97/tV+8pgdKoPAXmtiJsB+lDajwVrQ==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.analyzers/8.0.6",
+      "path": "microsoft.entityframeworkcore.analyzers/8.0.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -611,7 +611,7 @@
         "analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll",
         "docs/PACKAGE.md",
         "lib/netstandard2.0/_._",
-        "microsoft.entityframeworkcore.analyzers.8.0.6.nupkg.sha512",
+        "microsoft.entityframeworkcore.analyzers.8.0.7.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
@@ -983,52 +983,49 @@
         "version.txt"
       ]
     },
-    "MongoDB.Bson/2.25.0": {
-      "sha512": "xQx/qtC2nu9oGiyNqAwfiDpUMweLi0nID677cyKykpwmj5AVMrnd//UwmcmuX95178DeY6rf7cjmA613TQXPiA==",
+    "MongoDB.Bson/2.27.0": {
+      "sha512": "IZ0B3upRWzDkV9wWSJ4bO8BriYZ2ChjtBCHFGFglOVDZHjLz1D7Bmx2yAFQf/kWyieKD7s7xBLDywzezNX+NCw==",
       "type": "package",
-      "path": "mongodb.bson/2.25.0",
+      "path": "mongodb.bson/2.27.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "LICENSE.md",
         "lib/net472/MongoDB.Bson.dll",
         "lib/net472/MongoDB.Bson.xml",
         "lib/netstandard2.0/MongoDB.Bson.dll",
         "lib/netstandard2.0/MongoDB.Bson.xml",
         "lib/netstandard2.1/MongoDB.Bson.dll",
         "lib/netstandard2.1/MongoDB.Bson.xml",
-        "mongodb.bson.2.25.0.nupkg.sha512",
+        "mongodb.bson.2.27.0.nupkg.sha512",
         "mongodb.bson.nuspec",
         "packageIcon.png"
       ]
     },
-    "MongoDB.Driver/2.25.0": {
-      "sha512": "dMqnZTV6MuvoEI4yFtSvKJdAoN6NeyAEvG8aoxnrLIVd7bR84QxLgpsM1nhK17qkOcIx/IrpMIfrvp5iMnYGBg==",
+    "MongoDB.Driver/2.27.0": {
+      "sha512": "AP9z8FktHqKu/M3AOQ46fBTm7zLcJPOWvet8KY6NfwgXOqJwqHsedyjj0COceIvwAm2gdbRrR3bryfy0HzFuIw==",
       "type": "package",
-      "path": "mongodb.driver/2.25.0",
+      "path": "mongodb.driver/2.27.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "LICENSE.md",
         "lib/net472/MongoDB.Driver.dll",
         "lib/net472/MongoDB.Driver.xml",
         "lib/netstandard2.0/MongoDB.Driver.dll",
         "lib/netstandard2.0/MongoDB.Driver.xml",
         "lib/netstandard2.1/MongoDB.Driver.dll",
         "lib/netstandard2.1/MongoDB.Driver.xml",
-        "mongodb.driver.2.25.0.nupkg.sha512",
+        "mongodb.driver.2.27.0.nupkg.sha512",
         "mongodb.driver.nuspec",
         "packageIcon.png"
       ]
     },
-    "MongoDB.Driver.Core/2.25.0": {
-      "sha512": "oN4nLgO5HQEThTg/zqeoHqaO2+q64DBVb4r7BvhaFb0p0TM9jZKnCKvh1EA8d9E9swIz0CgvMrvL1mPyRCZzag==",
+    "MongoDB.Driver.Core/2.27.0": {
+      "sha512": "VoihnTUynBPRfLHAlcgW1UBcR8XF67x/F79a6f/cmxIogLlYViICleARYqBytnrXjoqylp00xWo0BNaelENo7A==",
       "type": "package",
-      "path": "mongodb.driver.core/2.25.0",
+      "path": "mongodb.driver.core/2.27.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "LICENSE.md",
         "THIRD-PARTY-NOTICES",
         "lib/net472/MongoDB.Driver.Core.dll",
         "lib/net472/MongoDB.Driver.Core.xml",
@@ -1036,28 +1033,28 @@
         "lib/netstandard2.0/MongoDB.Driver.Core.xml",
         "lib/netstandard2.1/MongoDB.Driver.Core.dll",
         "lib/netstandard2.1/MongoDB.Driver.Core.xml",
-        "mongodb.driver.core.2.25.0.nupkg.sha512",
+        "mongodb.driver.core.2.27.0.nupkg.sha512",
         "mongodb.driver.core.nuspec",
         "packageIcon.png"
       ]
     },
-    "MongoDB.EntityFrameworkCore/7.0.0-preview.1": {
-      "sha512": "AwfjV3WEm+tP4Qka+hBh3HFhh7gHxpATUyeTPYmqafgOBRLBPQgvhDqX9gIvOUXyquPc03Qnux13jFja8jxwEg==",
+    "MongoDB.EntityFrameworkCore/8.0.3": {
+      "sha512": "eSxPQFdpgHkAZ0hgWN9R9GYr4C9J++M0uF+XDury8HKWD+r54VWIz3TYY8BdX7JtuinPJtMrbWm5unXxd1FQXw==",
       "type": "package",
-      "path": "mongodb.entityframeworkcore/7.0.0-preview.1",
+      "path": "mongodb.entityframeworkcore/8.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
-        "lib/net7.0/MongoDB.EntityFrameworkCore.dll",
-        "mongodb.entityframeworkcore.7.0.0-preview.1.nupkg.sha512",
+        "lib/net8.0/MongoDB.EntityFrameworkCore.dll",
+        "mongodb.entityframeworkcore.8.0.3.nupkg.sha512",
         "mongodb.entityframeworkcore.nuspec"
       ]
     },
-    "MongoDB.Libmongocrypt/1.8.2": {
-      "sha512": "z/8JCULSHM1+mzkau0ivIkU9kIn8JEFFSkmYTSaMaWMMHt96JjUtMKuXxeGNGSnHZ5290ZPKIlQfjoWFk2sKog==",
+    "MongoDB.Libmongocrypt/1.10.0": {
+      "sha512": "2toxrngTVcb5PhQJMPlsxxnG97XJ+28WyBeW1Wfh2X+LOFbKabJDJJuWwipB9wLIb5VmqXEPWl6zYVvEW1cdAA==",
       "type": "package",
-      "path": "mongodb.libmongocrypt/1.8.2",
+      "path": "mongodb.libmongocrypt/1.10.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1074,7 +1071,7 @@
         "contentFiles/any/netstandard2.1/mongocrypt.dll",
         "lib/netstandard2.0/MongoDB.Libmongocrypt.dll",
         "lib/netstandard2.1/MongoDB.Libmongocrypt.dll",
-        "mongodb.libmongocrypt.1.8.2.nupkg.sha512",
+        "mongodb.libmongocrypt.1.10.0.nupkg.sha512",
         "mongodb.libmongocrypt.nuspec",
         "runtimes/linux/native/libmongocrypt.so",
         "runtimes/osx/native/libmongocrypt.dylib",
@@ -1326,9 +1323,9 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Microsoft.EntityFrameworkCore >= 8.0.6",
-      "MongoDB.Driver >= 2.25.0",
-      "MongoDB.EntityFrameworkCore >= 7.0.0-preview.1"
+      "Microsoft.EntityFrameworkCore >= 8.0.7",
+      "MongoDB.Driver >= 2.27.0",
+      "MongoDB.EntityFrameworkCore >= 8.0.3"
     ]
   },
   "packageFolders": {
@@ -1376,15 +1373,15 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
-            "version": "[8.0.6, )"
+            "version": "[8.0.7, )"
           },
           "MongoDB.Driver": {
             "target": "Package",
-            "version": "[2.25.0, )"
+            "version": "[2.27.0, )"
           },
           "MongoDB.EntityFrameworkCore": {
             "target": "Package",
-            "version": "[7.0.0-preview.1, )"
+            "version": "[8.0.3, )"
           }
         },
         "imports": [
