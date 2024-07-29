@@ -79,20 +79,10 @@ namespace CarBookingSystem.Services
 
                 Console.WriteLine(_carDbContext.ChangeTracker.DebugView.LongView);
             }  
-            else 
-            { 
+            else { 
                 throw new ArgumentException("Booking to be updated cannot be found");
             }
         }
-
-        // public async Task<IEnumerable<Booking>> GetAllBookingsAsync()
-        // {
-        //    // return await _carDbContext.Bookings.OrderBy(b => b.StartDate).AsNoTracking().AsEnumerable<Booking>();
-        //     return await _carDbContext.Bookings
-        //                               .OrderBy(b => b.StartDate)
-        //                               .AsNoTracking()
-        //                               .ToListAsync();
-        // }
         public async Task<IEnumerable<Booking>> GetAllBookingsAsync()
         {
             return await _carDbContext.Bookings
